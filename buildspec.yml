@@ -5,17 +5,14 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies"
       - npm install
 
   build:
     commands:
-      - echo "Building Vite React application"
       - npm run build
-
-  post_build:
-    commands:
-      - echo "Build completed successfully"
+      - echo "Verifying build output"
+      - ls -l dist
+      - ls -l dist/assets
 
 artifacts:
   files:
