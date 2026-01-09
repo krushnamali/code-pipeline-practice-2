@@ -5,12 +5,3 @@ files:
   - source: dist/
     destination: /var/www/html
     overwrite: yes
-
-hooks:
-  BeforeInstall:
-    - location: scripts/install_apache.sh
-      runas: root
-
-  ApplicationStart:
-    - location: scripts/start_apache.sh
-      runas: root
